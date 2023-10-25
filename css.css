@@ -4,10 +4,23 @@
     --primary-blue: #00aeef;
     --primary-blue-hover: #3dcaff;
     --primary-blue-active: #0062cc;
+
+    --black: black;
+    --black-hover: #333333;
+    --black-active: black;
+
+    --red: #f26c4f;
+    --red-hover: #f58972;
+    --red-active: #e52a20;
+
     --primary-blue-active-border: #7fbdff;
+
+    --cupon-green: #d7f0ea;
+
 
     --text-gray: rgba(0, 0, 0, 0.4);
     --divider-gray: rgba(0, 0, 0, 0.1);
+    
 }
 
 body {
@@ -62,6 +75,10 @@ a {
     cursor: pointer;
 }
 
+.btn.rounded{
+    border-radius: 30px;
+}
+
 /*button primary*/
 
 .btn-primary {
@@ -80,6 +97,45 @@ a {
 .btn-primary:active {
     background-color: var(--primary-blue-active);
 }
+
+/*button black*/
+
+.btn-black {
+    background-color: var(--black);
+    color: white;
+}
+
+.btn-black:hover {
+    background-color: var(--black-hover);
+}
+
+.btn-black:focus {
+    outline: var(--primary-blue-active-border) 3px solid !important;
+}
+
+.btn-black:active {
+    background-color: var(--black-active);
+}
+
+/*button red*/
+
+.btn-red {
+    background-color: var(--red);
+    color: white;
+}
+
+.btn-red:hover {
+    background-color: var(--red-hover);
+}
+
+.btn-red:focus {
+    outline: var(--primary-blue-active-border) 3px solid !important;
+}
+
+.btn-red:active {
+    background-color: var(--red-active);
+}
+
 
 /*button outline primary*/
 
@@ -105,11 +161,75 @@ a {
 }
 
 .btn-outline-primary:active {
+    color: white;
     background-color: var(--primary-blue-active);
     -webkit-box-shadow: inset 0px 0px 0px 2px var(--primary-blue-active);
     -moz-box-shadow: inset 0px 0px 0px 2px var(--primary-blue-active);
     box-shadow: inset 0px 0px 0px 2px var(--primary-blue-active);
 }
+
+/*button outline black*/
+
+.btn-outline-black {
+    background-color: transparent;
+    color: var(--black);
+    -webkit-box-shadow: inset 0px 0px 0px 2px var(--black);
+    -moz-box-shadow: inset 0px 0px 0px 2px var(--black);
+    box-shadow: inset 0px 0px 0px 2px var(--black);
+}
+
+.btn-outline-black:hover {
+    color: white;
+    background-color: var(--black-hover);
+    -webkit-box-shadow: inset 0px 0px 0px 2px  var(--black-hover);
+    -moz-box-shadow: inset 0px 0px 0px 2px  var(--black-hover);
+    box-shadow: inset 0px 0px 0px 2px var(--black-hover);
+}
+
+.btn-outline-black:focus {
+    outline: var(--primary-blue-active-border) 3px solid !important;
+
+}
+
+.btn-outline-black:active {
+    background-color: var(--black-active);
+    color: white;
+    -webkit-box-shadow: inset 0px 0px 0px 2px var(--black);
+    -moz-box-shadow: inset 0px 0px 0px 2px var(--black);
+    box-shadow: inset 0px 0px 0px 2px var(--black);
+}
+
+/*button outline red*/
+
+.btn-outline-red {
+    background-color: transparent;
+    color: var(--red);
+    -webkit-box-shadow: inset 0px 0px 0px 2px var(--red);
+    -moz-box-shadow: inset 0px 0px 0px 2px var(--red);
+    box-shadow: inset 0px 0px 0px 2px var(--red);
+}
+
+.btn-outline-red:hover {
+    color: white;
+    background-color: var(--red-hover);
+    -webkit-box-shadow: inset 0px 0px 0px 2px  var(--red-hover);
+    -moz-box-shadow: inset 0px 0px 0px 2px  var(--red-hover);
+    box-shadow: inset 0px 0px 0px 2px var(--red-hover);
+}
+
+.btn-outline-red:focus {
+    outline: var(--primary-blue-active-border) 3px solid !important;
+
+}
+
+.btn-outline-red:active {
+    background-color: var(--red-active);
+    color: white;
+    -webkit-box-shadow: inset 0px 0px 0px 2px var(--red-active);
+    -moz-box-shadow: inset 0px 0px 0px 2px var(--red-active);
+    box-shadow: inset 0px 0px 0px 2px var(--red-active);
+}
+
 
 /*button nav*/
 
@@ -273,7 +393,13 @@ a {
     -webkit-box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
     box-shadow:  0px 17px 20px -5px rgba(0, 0, 0, 0.15);
-    transition: .1s linear ;
+    transition: all .3s linear ;
+    border: none;
+}
+
+.custom-select-container:focus{
+    border: none;
+    outline: var(--primary-blue-active-border) 3px solid !important;
 }
 
 .custom-select-value {
@@ -286,10 +412,7 @@ a {
     cursor: pointer;
     user-select: none;
     font-weight: 600;
-}
-
-.custom-select-container:focus{
-    outline: var(--primary-blue-active-border) 3px solid !important;
+    border: none;
 }
 
 .custom-select-value::after {
@@ -302,8 +425,8 @@ a {
 }
 
 .custom-select-options {
-    z-index: 1000 !important;
     font-weight: 600;
+    opacity: 0;
     display: none;
     position: absolute;
     padding: 20px;
@@ -319,8 +442,7 @@ a {
     box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
     list-style-type: none;
     color: var(--text-gray);
-
-    transform: translateY(+10px);
+    transform: translateY(-10px);
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 
 }
@@ -330,11 +452,16 @@ a {
 }
 
 .custom-select-options.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
     display: block;
+
 }
 
 .custom-select-option {
     cursor: pointer;
+    z-index: 1000;
 }
 
 .custom-select-option:focus {
@@ -383,3 +510,46 @@ a {
 .input:focus{
     outline: var(--primary-blue-active-border) 3px solid !important;
 }
+
+
+.cupon
+{
+    width: 300px;
+}
+
+.cupon-bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.cupon-bg::after {
+    content: '';
+    width: 200px; /* Adjust the width of the line */
+    border-top: 3px dashed var(--text-gray); /* Customize the dashed line as needed */
+    position: absolute;
+    top: 50%;
+    border-radius: 10px;
+}
+
+.cupon-text {
+    position: absolute;
+    top: 50%; /* Adjust to vertically center the text */
+    left: 50%; /* Adjust to horizontally center the text */
+    transform: translate(-50%, -50%); /* Center the text perfectly */
+    z-index: 1; /* Place the text on top of the SVG */
+    /* Other text styles */
+    color: #ff0000; /* Text color */
+    font-size: 400px; /* Text font size */
+}
+
+.cupon-bg svg{
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.3)); 
+}
+
+.cupon-bg.green svg path{
+    fill: var(--cupon-green);
+}
+
+
