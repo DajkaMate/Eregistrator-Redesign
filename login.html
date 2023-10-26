@@ -9,19 +9,25 @@
     <title>Document</title>
     <script src="js.js"></script>
     <script type="module" src="script.js"></script>
+    <script src="showpassword.js"></script>
 </head>
 
 <body>
     <div class="login-bg">
         <div class="login">
-            <h2>Belépés</h2>
+            <h1>Belépés</h1>
             <h3>Bejelentkezési név</h3>
             <input class="login-input" type="text" class="" placeholder="Név">
             <h3>Jelszó</h3>
-            <input class="login-input" type="password" class="" placeholder="Jelszó">
+            <input class="login-input" id="myInput" type="password" class="" placeholder="Jelszó">
+            <input class="showpassword" type="checkbox" id="showpass" onclick="showpassword()">
+
+            <label class="showpassword-icon" for="showpass"><div class="visible"><img src="eye-fill.svg" alt=""></div></label>
+            <label class="showpassword-icon" for="showpass"><div class="hidden"><img src="eye-slash-fill.svg" alt=""></div></label>
+
             <div class="login-options">
                 <div class="checkbox">
-                    <input class="SZAR" type="checkbox" id="check">
+                    <input class="SZAR" type="checkbox"  id="check">
                     <label for="check">Emlékezz rám</label>            
                 </div>
                 <div>
