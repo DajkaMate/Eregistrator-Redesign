@@ -1,29 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+
 
 :root {
-    --primary-blue: #00aeef;
-    --primary-blue-hover: #3dcaff;
-    --primary-blue-active: #0062cc;
 
-    --black: black;
-    --black-hover: #333333;
-    --black-active: black;
+    --dark: #212529;
 
     --red: #f26c4f;
     --red-hover: #f58972;
-    --red-active: #e52a20;
-
-    --primary-blue-active-border: #7fbdff;
+    --red-active: #c2563f;
 
     --cupon-green: #d7f0ea;
     --cupon-light: white;
     --cupon-blue: #dff6fe;
 
+    --black: #000000;
+    --black-hover: var(--dark);
+    --black-active: var(--black);
+
     --text-gray: rgba(0, 0, 0, 0.4);
     --divider-gray: rgba(0, 0, 0, 0.1);
 
     --table-head: #e1e1e1;
+
+    --shadow-sm: 0px 1px 3px rgba(16, 24, 40, 0.1);
+    --shadow-lg: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+    --shadow-xl: 0px 32px 64px -12px rgba(16, 24, 40, 0.14);
+    --shadow-3xl: 0px 24px 48px -12px rgba(16, 24, 40, 0.18);
+
 }
+
+
+
+
+/* enyém*/ 
 
 .login-bg {
     display: flex;
@@ -32,17 +42,17 @@
     background-image: url('./bg.jpg');
     height: 100vh;
     background-size: cover;
-    -webkit-box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: var(--shadow-lg);
+    -moz-box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-lg);
 }
 
 .login {
     padding: 50px 30px;
     background: rgba(255, 255, 255, 0.5);
-    -webkit-box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: var(--shadow-lg);
+    -moz-box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-lg);
     backdrop-filter: blur(14.2px);
     -webkit-backdrop-filter: blur(14.2px);
     width: 500px;
@@ -75,7 +85,7 @@
 
 .login-input:focus{
     outline: none;
-    outline: 3px solid var(--primary-blue-active-border);
+    outline: 3px solid var(--primary-active-border);
 }
 
 .checkbox{
@@ -204,20 +214,21 @@ section {
 /*button primary*/
 
 .btn-primary {
-    background-color: var(--primary-blue);
+    background-color: var(--primary);
     color: white;
+    border-radius: var(--border-radius);
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-blue-hover);
+    background-color: var(--primary-hover);
 }
 
 .btn-primary:focus {
-    outline: var(--primary-blue-active-border) 3px solid !important;
+    outline: var(--primary-active-border) 3px solid !important;
 }
 
 .btn-primary:active {
-    background-color: var(--primary-blue-active);
+    background-color: var(--primary-active);
 }
 
 /*button black*/
@@ -232,7 +243,7 @@ section {
 }
 
 .btn-black:focus {
-    outline: var(--primary-blue-active-border) 3px solid !important;
+    outline: var(--primary-active-border) 3px solid !important;
 }
 
 .btn-black:active {
@@ -251,7 +262,7 @@ section {
 }
 
 .btn-red:focus {
-    outline: var(--primary-blue-active-border) 3px solid !important;
+    outline: var(--primary-active-border) 3px solid !important;
 }
 
 .btn-red:active {
@@ -263,31 +274,31 @@ section {
 
 .btn-outline-primary {
     background-color: transparent;
-    color: var(--primary-blue);
-    -webkit-box-shadow: inset 0px 0px 0px 2px var(--primary-blue);
-    -moz-box-shadow: inset 0px 0px 0px 2px var(--primary-blue);
-    box-shadow: inset 0px 0px 0px 2px var(--primary-blue);
+    color: var(--primary);
+    -webkit-box-shadow: inset 0px 0px 0px 2px var(--primary);
+    -moz-box-shadow: inset 0px 0px 0px 2px var(--primary);
+    box-shadow: inset 0px 0px 0px 2px var(--primary);
 }
 
 .btn-outline-primary:hover {
     color: white;
-    background-color: var(--primary-blue-hover);
-    -webkit-box-shadow: inset 0px 0px 0px 2px var(--primary-blue-hover);
-    -moz-box-shadow: inset 0px 0px 0px 2px var(--primary-blue-hover);
-    box-shadow: inset 0px 0px 0px 2px var(--primary-blue-hover);
+    background-color: var(--primary-hover);
+    -webkit-box-shadow: inset 0px 0px 0px 2px var(--primary-hover);
+    -moz-box-shadow: inset 0px 0px 0px 2px var(--primary-hover);
+    box-shadow: inset 0px 0px 0px 2px var(--primary-hover);
 }
 
 .btn-outline-primary:focus {
-    outline: var(--primary-blue-active-border) 3px solid !important;
+    outline: var(--primary-active-border) 3px solid !important;
 
 }
 
 .btn-outline-primary:active {
     color: white;
-    background-color: var(--primary-blue-active);
-    -webkit-box-shadow: inset 0px 0px 0px 2px var(--primary-blue-active);
-    -moz-box-shadow: inset 0px 0px 0px 2px var(--primary-blue-active);
-    box-shadow: inset 0px 0px 0px 2px var(--primary-blue-active);
+    background-color: var(--primary-active);
+    -webkit-box-shadow: inset 0px 0px 0px 2px var(--primary-active);
+    -moz-box-shadow: inset 0px 0px 0px 2px var(--primary-active);
+    box-shadow: inset 0px 0px 0px 2px var(--primary-active);
 }
 
 /*button outline black*/
@@ -309,7 +320,7 @@ section {
 }
 
 .btn-outline-black:focus {
-    outline: var(--primary-blue-active-border) 3px solid !important;
+    outline: var(--primary-active-border) 3px solid !important;
 
 }
 
@@ -340,7 +351,7 @@ section {
 }
 
 .btn-outline-red:focus {
-    outline: var(--primary-blue-active-border) 3px solid !important;
+    outline: var(--primary-active-border) 3px solid !important;
 
 }
 
@@ -360,18 +371,18 @@ section {
 }
 
 .btn-nav:hover {
-    background-color: var(--primary-blue-hover);
+    background-color: var(--primary-hover);
     color: white;
 }
 
 .btn-nav:focus {
-    background-color: var(--primary-blue-hover);
+    background-color: var(--primary-hover);
     color: white;
-    outline: var(--primary-blue-active-border) 3px solid !important;
+    outline: var(--primary-active-border) 3px solid !important;
 }
 
 .btn-nav:active {
-    background-color: var(--primary-blue-active);
+    background-color: var(--primary-active);
 }
 
 /* Link  */
@@ -385,11 +396,11 @@ section {
 /* Link primary */
 
 .link.link-primary {
-    color: var(--primary-blue);
+    color: var(--primary);
 }
 
 .link.link-primary:hover {
-    color: var(--primary-blue-hover);
+    color: var(--primary-hover);
 }
 
 /* Link black */
@@ -472,9 +483,9 @@ section {
     top: calc(100% + .25rem);
     background-color: white;
     padding: 20px;
-    -webkit-box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: var(--shadow-lg);
+    -moz-box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-lg);
     opacity: 0;
     pointer-events: none;
     transform: translateY(-10px);
@@ -497,7 +508,7 @@ section {
 
 .dropdown-link:focus {
     outline: none;
-    color: var(--primary-blue);
+    color: var(--primary);
 }
 
 
@@ -512,15 +523,15 @@ section {
 
 
 .dropdown-link:hover {
-    color: var(--primary-blue);
+    color: var(--primary);
     text-decoration: none;
 }
 
 .shadow-box {
     padding: 20px;
-    -webkit-box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: var(--shadow-lg);
+    -moz-box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-lg);
 }
 
 input::-webkit-outer-spin-button,
@@ -551,16 +562,16 @@ input[type=number] {
 .custom-select-container {
     display: inline-block;
     position: relative;
-    -webkit-box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: var(--shadow-lg);
+    -moz-box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-lg);
     transition: outline .1s linear;
     outline-color: transparent;
 }
 
 .custom-select-container:focus {
 
-    outline: var(--primary-blue-active-border) 3px solid !important;
+    outline: var(--primary-active-border) 3px solid !important;
 }
 
 .custom-select-value {
@@ -599,9 +610,9 @@ input[type=number] {
     border-top: none;
     max-height: 300px;
     overflow-y: auto;
-    -webkit-box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: var(--shadow-lg);
+    -moz-box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-lg);
     list-style-type: none;
     pointer-events: none;
     color: var(--text-gray);
@@ -629,7 +640,7 @@ input[type=number] {
 
 .custom-select-option:focus {
     outline: none;
-    color: var(--primary-blue);
+    color: var(--primary);
 }
 
 
@@ -643,11 +654,11 @@ input[type=number] {
 }
 
 .custom-select-option:hover {
-    color: var(--primary-blue);
+    color: var(--primary);
 }
 
 .custom-select-option.selected {
-    color: var(--primary-blue);
+    color: var(--primary);
 }
 
 .custom-input-box{
@@ -655,9 +666,9 @@ input[type=number] {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     padding: 19px 31px 19px 31px;
-    -webkit-box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 17px 20px -5px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: var(--shadow-lg);
+    -moz-box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-lg);
     background: white;
     transition: .1s linear;
     outline-color: transparent;
@@ -676,7 +687,7 @@ input[type=number] {
 
 
 .custom-input-box:focus-within{
-    outline: var(--primary-blue-active-border) 3px solid;
+    outline: var(--primary-active-border) 3px solid;
 }
 
 .custom-input-box i{
@@ -721,7 +732,7 @@ input[type=number] {
 
 .percentage {
     margin-left: 10px;
-    border: solid 2px var(--primary-blue);
+    border: solid 2px var(--primary);
     border-radius: 50px;
     padding: 2px 8px;
 }
@@ -774,12 +785,11 @@ input[type=number] {
 .cupon-footer {}
 
 .cupon-title span {
-    color: var(--primary-blue);
+    color: var(--primary);
 }
 
 .cupon-bg svg {
-    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.3));
-    stroke: black; 
+    filter: drop-shadow(var(--shadow-sm));
 }
 
 .cupon-bg:hover svg{
@@ -868,7 +878,7 @@ tr:not(:last-child)
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-weight: 600;
-    width: 15px;
+    width: 40px;
 }
 
 .quantity-buttons input:focus{

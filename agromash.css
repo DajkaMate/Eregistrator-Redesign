@@ -1,0 +1,13 @@
+@import url(css2.css);
+@import url(cég1.css);
+
+:root{
+    --primary: #12723B;
+    --primary-hover: #2a804f;
+    --primary-active: #0d5029;
+    --primary-active-border: #89b99d;
+
+    --border-radius: 30px;
+}
+
+
